@@ -2,16 +2,8 @@
 
 A simple (and still incomplete) blockchain manager, written in python with flask.
 
-Preconditions:
-python 3.x with the modules:
-* datetime
-* flask
-* flask-wtf
-* functools
-* json
-* requests
-* socket
-* wtforms
+Preconditions: python 3.x with the modules: datetime, flask, flask-wtf, functools, json, requests, socket, wtforms
+
 Run the server which handles the local host with:
     python bc0.py
 or:
