@@ -1,0 +1,62 @@
+<!--
+This file is part of BC0, Copyright 2018, Luca Mari.
+
+BC0 is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, version 2.
+
+BC0 is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License <http://www.gnu.org/licenses/> for more details.
+-->
+<html>
+<head><title></title></head>
+<body>
+<h1>Exploring blockchains... <a href="javascript:window.alert('BC0\nSample and simple blockchain app,\nwritten in Python with Flask\nby Luca Mari, 2018.');">*</a></h1>
+Connected as host {{ hostid }} &nbsp;&nbsp;&nbsp;
+{% if 'userid' not in session %}
+  <form method="post" action="login">
+    Login: <input type="text" name="userid" id="userid">
+    <input type="submit" value="submit">
+  </form>
+{% else %}
+  Logged in as '{{ userid }}' [<a href="logout">Logout</a>]
+{% endif %}
+<hr/>
+{% if 'userid' in session %}
+
+  <form method="post" action="submit">
+    <b>BC name</b>: <input type="text" name="name" id="name" size="10" value={{bcname}}>
+    <p/>
+
+    <b>Local management</b>
+      <input type="submit" value="Create" formaction="create_chain">
+      <input type="submit" value="Delete" formaction="delete_chain">
+    <p/>
+
+    <b>Access to a remote BC</b>
+      Host: <input type="text" name="host" id="host" size="10" value={{bchost}}>
+      <input type="submit" value="Enter" formaction="enter_chain">
+      <input type="submit" value="Leave" formaction="leave_chain">
+    <p/>
+
+    <b>Use:</b>
+      Data: <input type="text" name="data" id="data" size="10" value={{bcdata}}>
+      <input type="submit" value="Add" formaction="add_data">
+      <input type="submit" value="List hosts" formaction="list_chain_hosts">
+      <input type="submit" value="Show content" formaction="show_content">
+      <input type="submit" value="Check chain" formaction="check_chain">
+
+  </form>
+
+{% endif %}
+
+<hr/>
+<pre id="x">{{ msg }}</pre>
+<script>
+var x = JSON.parse(document.getElementById("x").innerHTML);
+document.getElementById("x").innerHTML = JSON.stringify(x, null, 2);
+</script>
+</body>
+</html>
