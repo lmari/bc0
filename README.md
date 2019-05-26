@@ -9,13 +9,13 @@ Run the server which handles the local host with:
 
 or:
 
-    python bc0.py \<TCP port\>
+    python bc0.py <TCP port>
 
 (for example python bc0.py 5001)
 
 or
 
-    python bc0.py \<TCP port\> \<IP address\>
+    python bc0.py <TCP port> <IP address>
 
 (for example python bc0.py 5001 192.168.0.1)<br />
 Then connect the browser to the address.
