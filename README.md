@@ -1,8 +1,7 @@
 # bc0
 
-A simple (and still incomplete) blockchain manager, written in python with flask.
-
-Preconditions: python 3.x with the modules: datetime, flask, flask-wtf, functools, json, requests, socket, wtforms
+A simple (and still incomplete) blockchain manager, written in python with flask.<br/>
+Preconditions: python 3.x with the modules: datetime, flask, flask-wtf, functools, json, requests, socket, wtforms.
 
 Run the server which handles the local host with:
 
@@ -10,14 +9,13 @@ Run the server which handles the local host with:
 
 or:
 
-python bc0.py \<TCP port\>
+    python bc0.py \<TCP port\>
 
 (for example python bc0.py 5001)
 
 or
 
-python bc0.py <TCP port> <IP address>
+    python bc0.py \<TCP port\> \<IP address\>
 
-(for example python bc0.py 5001 192.168.0.1)
-
+(for example python bc0.py 5001 192.168.0.1)<br />
 Then connect the browser to the address.
