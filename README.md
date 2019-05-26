@@ -19,4 +19,4 @@ or
 
 (for example python bc0.py 5001 192.168.0.1)<br />
 Then connect the browser to the address.<br />
-Each running instance is both a client and a server, which can connect to other instances.
+Each running instance is both a client and a server (i.e., a peer), which can connect to other peers.
